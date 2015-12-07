@@ -1,16 +1,11 @@
 ﻿mixin feature(icon, title, msg)
-    .col-md-6
+    .col-md-4
         span(class="icon icon-#{ icon }")
         h3 #{ title }
         p #{ msg }
 
 .container
    .row#messaging
-        .col-md-6
-            h3.subtitle Workers
-            +feature('wink',"Do what you love", 'List the tasks that you love to do and let the clients come to you.')
-            +feature('target','Maximize your value', 'Focusing on a finite list of tasks you are an expert in allows quicker delivery of value.')
-         .col-md-6
-            h3.subtitle Clients
-            +feature('user-check','Hire experts', 'Hire specialists experienced in delivering the specific task.')
-            +feature('coin-dollar','Reduce costs', 'Pay for only the task you need completed rather than a full unwieldy solution.')
+        .col-md-2
+        +feature('profile',"Portfolio building", "Our team has the knowledge and experience to help guide you in building a portfolio that will grab any company's attention.")
+        +feature('user-tie','Warm introductions', "What's the use preparing you for interviews you'll never have? We help connect you to the best companies in tech.")
