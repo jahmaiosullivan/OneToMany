@@ -8,7 +8,7 @@
     "email": "jahmai.osullivan@workqueue.co"
   },
   "dependencies": {
-    "agenda": "^0.6.28",
+    "agenda": "^0.7.5",
     "async": "^0.9.0",
     "azure-storage": "^0.4.5",
     "bcryptjs": "^2.1.0",
