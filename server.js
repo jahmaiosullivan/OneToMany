@@ -17,8 +17,8 @@ var favicon = require('serve-favicon'),
     express = require('express'),
     app = express();
 
-app.locals.sitename = "WorkQueue";
-app.locals.slogan = "Hire experts to get the job done right.";
+app.locals.sitename = "OneToMany";
+app.locals.slogan = "Introducing STEM graduates to the world's top tech companies.";
 app.locals.moment = require('moment');
 app.locals.pluralize = require('pluralize');
 app.locals.defaultDateFormat = require('./vars').defaultDateFormat;

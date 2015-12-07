@@ -90,7 +90,7 @@ jQuery(document).ready(function () {
 
     $('#subscription').ajaxSubscribe({
 		callback: callbackFunction,
-        url: 'http://www.smallapi.com/subscriberlists/workqueue/emails',
+        url: 'http://www.smallapi.com/subscriberlists/onetomany/emails',
         apikey: 'muIAnRAnLgnxu5t6mgU1wbcjAv8GCJPcVDzPQ1t5bIQ='
 	});
 

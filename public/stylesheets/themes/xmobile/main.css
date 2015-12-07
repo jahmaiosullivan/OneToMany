@@ -2268,12 +2268,13 @@ header #subtextpanel {
 
 h1#slogan {
     font-size: 64px;
+    margin: 0 20px;
 }
 
 #messaging h3.subtitle {
     margin-top: 0;
     margin-bottom: 20px;
-    color: #EF3D4A;
+    color: #5170DD;
 }
 
 #messaging > div:first-child {
