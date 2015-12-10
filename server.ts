@@ -1,6 +1,9 @@
 ﻿import express = require('express');
 import path = require('path');
-
+import bodyParser = require('body-parser');
+import favicon = require('serve-favicon');
+import methodOverride = require('method-override');
+   
 /**
  * Globals
  */
@@ -12,10 +15,7 @@ global.Q = require('q');
 /**
  * Module dependencies.
  */
-var favicon = require('serve-favicon'),
-    methodOverride = require('method-override'),
-    bodyParser = require('body-parser'),    
-    initializer = require('./config/initializer.js'),
+var initializer = require('./config/initializer.js'),
     app = express();
 
 

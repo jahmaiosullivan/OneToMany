@@ -1,5 +1,8 @@
 var express = require('express');
 var path = require('path');
+var bodyParser = require('body-parser');
+var favicon = require('serve-favicon');
+var methodOverride = require('method-override');
 /**
  * Globals
  */
@@ -10,7 +13,7 @@ global.Q = require('q');
 /**
  * Module dependencies.
  */
-var favicon = require('serve-favicon'), methodOverride = require('method-override'), bodyParser = require('body-parser'), initializer = require('./config/initializer.js'), app = express();
+var initializer = require('./config/initializer.js'), app = express();
 app.locals.sitename = "OneToMany";
 app.locals.slogan = "Highlighting top STEM graduates from all over the world.";
 app.locals.moment = require('moment');
