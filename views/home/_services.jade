@@ -1,11 +1,16 @@
 ﻿mixin feature(icon, title, msg)
-    .col-md-4
+    .col-md-3
         span(class="icon icon-#{ icon }")
         h3 #{ title }
         p #{ msg }
 
 .container
+   h3.subtitle How it works?
    .row#messaging
-        .col-md-2
-        +feature('profile',"Portfolio building", "Our team has the knowledge and experience to help guide you in building a portfolio that will grab any company's attention.")
-        +feature('user-tie','Warm introductions', "What's the use preparing you for interviews you'll never have? We help connect you to the best companies in tech.")
+        +feature('profile',"Build your portfolio", "Our team has intimate knowledge of what companies are looking for and will help guide you in building a stunning portfolio.")
+        .col-md-1
+            i.icon-arrow-right.nextarrow
+        +feature('user-tie','Interview with top companies', "The world's top companies are looking for you.")
+        .col-md-1
+            i.icon-arrow-right.nextarrow
+        +feature('user-tie','Land an awesome job', "Start working at your awesome dream job!")

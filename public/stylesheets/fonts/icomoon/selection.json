@@ -360,7 +360,7 @@
 			"attrs": [],
 			"properties": {
 				"id": 758,
-				"order": 28,
+				"order": 32,
 				"prevSize": 32,
 				"ligatures": "list-numbered, options",
 				"name": "list-numbered",
@@ -478,6 +478,58 @@
 			"setIdx": 0,
 			"setId": 0,
 			"iconIdx": 273
+		},
+		{
+			"icon": {
+				"paths": [
+					"M992 512l-480-480v288h-512v384h512v288z"
+				],
+				"attrs": [],
+				"tags": [
+					"arrow-right",
+					"right",
+					"next"
+				],
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"id": 1067,
+				"order": 33,
+				"prevSize": 32,
+				"ligatures": "arrow-right, right3",
+				"name": "arrow-right",
+				"code": 59956
+			},
+			"setIdx": 0,
+			"setId": 0,
+			"iconIdx": 308
+		},
+		{
+			"icon": {
+				"paths": [
+					"M32 512l480 480v-288h512v-384h-512v-288z"
+				],
+				"attrs": [],
+				"tags": [
+					"arrow-left",
+					"left",
+					"previous"
+				],
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"id": 1071,
+				"order": 34,
+				"prevSize": 32,
+				"ligatures": "arrow-left, left3",
+				"name": "arrow-left",
+				"code": 59960
+			},
+			"setIdx": 0,
+			"setId": 0,
+			"iconIdx": 312
 		},
 		{
 			"icon": {

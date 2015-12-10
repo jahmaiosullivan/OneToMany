@@ -3,7 +3,7 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>WorkQueue</Name>
+    <Name>OneToMany</Name>
     <RootNamespace>NodejsWebApp1</RootNamespace>
     <NameOfLastUsedPublishProfile>WorkQueue - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
@@ -14,7 +14,8 @@
     <ProjectGuid>9d72c3cf-ad9a-443c-bba4-15d9ecf8b727</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>server.js</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +24,9 @@
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <ProjectView>ShowAllFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <EnableTypeScript>true</EnableTypeScript>
     <StartWebBrowser>true</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -1629,6 +1633,7 @@
     <Content Include="views\about.jade" />
     <Content Include="views\auth\login.jade" />
     <Content Include="views\auth\register.jade" />
+    <Content Include="views\candidates\Search.jade" />
     <Content Include="views\contact.jade" />
     <Content Include="views\home\_services.jade" />
     <Content Include="views\index.jade" />
@@ -2551,9 +2556,8 @@
     <Compile Include="routes\api\v1\user.js" />
     <Compile Include="routes\jobs.js" />
     <Compile Include="routes\routerbase.js" />
-    <Compile Include="routes\web\webroutes_auth.js" />
-    <Compile Include="routes\web\webroutes_main.js" />
-    <Compile Include="routes\web\webroutes_user.js" />
+    <TypeScriptCompile Include="routes\web\webroutes_main.ts" />
+    <TypeScriptCompile Include="server.ts" />
     <Compile Include="services\base_service.js" />
     <Compile Include="services\eventservice.js" />
     <Compile Include="services\groupservice.js" />
@@ -2577,9 +2581,12 @@
     <Compile Include="public\javascripts\jquery.validate.unobtrusive.js" />
     <Compile Include="public\javascripts\jquery.validate.unobtrusive.min.js" />
     <Compile Include="public\javascripts\_references.js" />
-    <Compile Include="server.js" />
     <Compile Include="tests\example.js" />
     <Compile Include="vars.js" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\passport.d.ts" />
+    <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
@@ -2924,11 +2931,16 @@
     <Folder Include="routes\" />
     <Folder Include="routes\api\" />
     <Folder Include="tests\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\express\" />
+    <Folder Include="typings\node\" />
+    <Folder Include="typings\stylus\" />
     <Folder Include="uploads\" />
     <Folder Include="views\" />
     <Folder Include="views\auth\" />
     <Folder Include="views\home\" />
     <Folder Include="views\layouts\" />
+    <Folder Include="views\candidates\" />
     <Folder Include="views\partials\" />
     <Folder Include="views\tasks\" />
     <Folder Include="views\users\" />

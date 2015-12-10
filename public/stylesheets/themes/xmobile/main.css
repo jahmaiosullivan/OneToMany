@@ -720,7 +720,7 @@ header .btn-theme {
 }
 
 #services h3 {
-	margin: 30px auto 10px;
+	margin: 0 auto 20px;
 }
 
 #services .icon {
@@ -2277,8 +2277,8 @@ h1#slogan {
     color: #5170DD;
 }
 
-#messaging > div:first-child {
-    border-right: solid 1px #f1f4f5;
+#messaging i.nextarrow {
+    font-size: 64px;
+    padding-top: 60px;
 }
-
 /* END */
