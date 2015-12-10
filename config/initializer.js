@@ -1,22 +1,15 @@
 ﻿var morgan = require('morgan'),
     fs = require("fs"),
     jobService = require('../services/jobService'),
-    passportConfig = require('./passportconfig'),
-    RouterBase = require('../routes/routerbase');
+    passportConfig = require('./passportconfig');
     
 
 module.exports = {
     Routes: function (app, express) {
         // ROUTES FOR OUR WEB APP
         // =============================================================================
-        var webRoutePath = __dirname + "/../routes/web/";
-        fs.readdirSync(webRoutePath).forEach(function (file) {
-            var expressRouter = express.Router();
-            expressRouter.base = new RouterBase();
-
-            var webroute = require(webRoutePath + file)(expressRouter);
-            app.use('/' + webroute.baseurl, webroute);
-        });
+        var webroute = require(__dirname + "/../routes/webroutes")(express.Router());
+        app.use("/", webroute);
 
 
         // ROUTES FOR OUR API
