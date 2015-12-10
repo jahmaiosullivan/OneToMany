@@ -56,7 +56,7 @@ declare module 'passport' {
         provider: string;
         id: string;
         displayName: string;
-        name? : {
+        name?: {
             familyName: string;
             givenName: string;
             middleName?: string;

@@ -12,7 +12,6 @@
 
 declare module "express" {
     import http = require('http');
-    import passport = require('passport');
 
     // Merged declaration, e is both a callable function and a namespace
     function e(): e.Express;
@@ -230,13 +229,23 @@ declare module "express" {
             views: any;
 
             count: number;
-
-            notice: string;
-
-            passport: passport.Passport;
         }
 
         interface Request {
+
+            authInfo?: any;
+
+            // These declarations are merged into express's Request type
+            login(user: any, done: (err: any) => void): void;
+            login(user: any, options: Object, done: (err: any) => void): void;
+            logIn(user: any, done: (err: any) => void): void;
+            logIn(user: any, options: Object, done: (err: any) => void): void;
+
+            logout(): void;
+            logOut(): void;
+
+            isAuthenticated(): boolean;
+            isUnauthenticated(): boolean;
 
             session: Session;
 
@@ -538,19 +547,6 @@ declare module "express" {
             originalUrl: string;
 
             url: string;
-
-            authInfo?: any;
-
-            login(user: any, done: (err: any) => void): void;
-            login(user: any, options: Object, done: (err: any) => void): void;
-            logIn(user: any, done: (err: any) => void): void;
-            logIn(user: any, options: Object, done: (err: any) => void): void;
-
-            logout(): void;
-            logOut(): void;
-
-            isAuthenticated(): boolean;
-            isUnauthenticated(): boolean;
         }
 
         interface MediaType {

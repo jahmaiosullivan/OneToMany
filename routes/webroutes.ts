@@ -1,4 +1,5 @@
 ﻿import express = require('express');
+import passport = require('passport');
 var viewsFolder = 'auth';
 var userservice = new (require('../services/userservice'))();
 
@@ -20,7 +21,7 @@ module.exports = router => {
     });
     
     router.post('/login', isAnonymous, (req: express.Request, res: express.Response) => {
-        req.session.passport.authenticate('local', {
+        passport.authenticate('local', {
             successRedirect: '/',
             failureRedirect: '/login',
             failureFlash: true
@@ -32,11 +33,11 @@ module.exports = router => {
         console.log("LOGGING OUT " + req.user.email);
         req.logout();
         res.redirect('/');
-        req.session.notice = "You have successfully been logged out!";
+        //req.session.notice = "You have successfully been logged out!";
     });
     
     router.post('/sign-up', isAnonymous, (req: express.Request, res: express.Response) => {
-        req.session.passport.authenticate('local-signup', {
+        passport.authenticate('local-signup', {
             successRedirect: '/',
             failureRedirect: '/login'
         });
