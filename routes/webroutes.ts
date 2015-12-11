@@ -11,39 +11,6 @@ module.exports = router => {
     });
     
     
-    /*************** Auth *****************************/
-    router.get('/login', isAnonymous,(req: express.Request, res: express.Response) => {
-        res.render(viewsFolder + '/login', {});
-    });
-    
-    router.get('/register', isAnonymous, (req: express.Request, res: express.Response) => {
-        res.render(viewsFolder + '/register', {});
-    });
-    
-    router.post('/login', isAnonymous, (req: express.Request, res: express.Response) => {
-        passport.authenticate('local', {
-            successRedirect: '/',
-            failureRedirect: '/login',
-            failureFlash: true
-        })
-    });
-    
-    //logs user out of site, deleting them from the session, and returns to homepage
-    router.get('/logout', isAuthenticated, (req: express.Request, res: express.Response) => {
-        console.log("LOGGING OUT " + req.user.email);
-        req.logout();
-        res.redirect('/');
-        //req.session.notice = "You have successfully been logged out!";
-    });
-    
-    router.post('/sign-up', isAnonymous, (req: express.Request, res: express.Response) => {
-        passport.authenticate('local-signup', {
-            successRedirect: '/',
-            failureRedirect: '/login'
-        });
-    });
-    
-    
     /************************** Users *************************************************/
     router.get('/users', isAuthenticated, (req: express.Request, res: express.Response) => {
         userservice.All()
@@ -55,7 +22,7 @@ module.exports = router => {
     });
     
     router.get('/users/profile', isAuthenticated, (req: express.Request, res: express.Response) => {
-        res.render('users/profile', { user: req.session.user });
+        res.render('users/profile', { user: req.user });
     });
 
     return router;

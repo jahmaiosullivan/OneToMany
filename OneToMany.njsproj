@@ -6,6 +6,7 @@
     <Name>OneToMany</Name>
     <RootNamespace>NodejsWebApp1</RootNamespace>
     <NameOfLastUsedPublishProfile>WorkQueue - Web Deploy</NameOfLastUsedPublishProfile>
+    <ToolsVersionPromptShown>1.7</ToolsVersionPromptShown>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -14,8 +15,7 @@
     <ProjectGuid>9d72c3cf-ad9a-443c-bba4-15d9ecf8b727</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>server.ts</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,7 +27,7 @@
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
     <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
     <EnableTypeScript>true</EnableTypeScript>
-    <TypeScriptToolsVersion>1.6</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
     <StartWebBrowser>true</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -2503,7 +2503,7 @@
     <Compile Include="bower_components\slimScroll\package.js" />
     <Compile Include="config\flow-node.js" />
     <Compile Include="config\mongodbconfig.js" />
-    <Compile Include="config\passportconfig.js" />
+    <TypeScriptCompile Include="config\passportconfig.ts" />
     <Compile Include="config\pgdbconfig.js" />
     <Compile Include="config\docdbconfig.js" />
     <Compile Include="config\initializer.js" />
@@ -2584,9 +2584,15 @@
     <Compile Include="tests\example.js" />
     <Compile Include="vars.js" />
     <TypeScriptCompile Include="typings\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\express-session.d.ts" />
     <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\method-override.d.ts" />
+    <TypeScriptCompile Include="typings\mime.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\passport-local.d.ts" />
     <TypeScriptCompile Include="typings\passport.d.ts" />
+    <TypeScriptCompile Include="typings\serve-favicon.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static.d.ts" />
     <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
   </ItemGroup>
   <ItemGroup>

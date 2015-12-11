@@ -4,6 +4,25 @@
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
 /// <reference path="./express/express.d.ts" />
+
+declare module Express {
+    export interface Request {
+        authInfo?: any;
+
+        // These declarations are merged into express's Request type
+        login(user: any, done: (err: any) => void): void;
+        login(user: any, options: Object, done: (err: any) => void): void;
+        logIn(user: any, done: (err: any) => void): void;
+        logIn(user: any, options: Object, done: (err: any) => void): void;
+
+        logout(): void;
+        logOut(): void;
+
+        isAuthenticated(): boolean;
+        isUnauthenticated(): boolean;
+    }
+}
+
 declare module 'passport' {
     import express = require('express');
 

@@ -3,7 +3,6 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
 var methodOverride = require('method-override');
-var http = require('http');
 /**
  * Globals
  */
@@ -35,7 +34,11 @@ initializer.Auth(app);
 initializer.Logs(app);
 initializer.Routes(app, express);
 //initializer.Jobs(app);
-http.createServer(app).listen(app.get("port"), () => {
-    console.log(`Server listening on port ${app.get("port")}`);
+var server = app.listen(process.env.PORT || 1337, function () {
+    var port = server.address().port;
+    console.log('Server listening on port %s', port);
 });
+//http.createServer(app).listen(app.get("port"), () => {
+//    console.log(`Server listening on port ${app.get("port")}`);
+//});
 //# sourceMappingURL=server.js.map

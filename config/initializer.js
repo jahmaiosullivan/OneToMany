@@ -10,7 +10,9 @@ module.exports = {
         // =============================================================================
         var webroute = require(__dirname + "/../routes/webroutes")(express.Router());
         app.use("/", webroute);
-
+        
+        var authroutes = require(__dirname + "/../routes/webroutes_auth")(express.Router());
+        app.use("/", authroutes);
 
         // ROUTES FOR OUR API
         // =============================================================================
