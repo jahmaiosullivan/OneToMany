@@ -1,12 +1,13 @@
 var viewsFolder = 'auth';
 var userservice = new (require('../services/userservice'))();
+var authHelper = require('./authHelper');
 module.exports = router => {
     // define the home page route
-    router.get('', isAnonymous, (req, res) => {
+    router.get('', authHelper.isAnonymous, (req, res) => {
         res.render('home/landingpg', res);
     });
     /************************** Users *************************************************/
-    router.get('/users', isAuthenticated, (req, res) => {
+    router.get('/users', authHelper.isAuthenticated, (req, res) => {
         userservice.All()
             .then(users => {
             res.render('users/list', {
@@ -14,19 +15,9 @@ module.exports = router => {
             });
         });
     });
-    router.get('/users/profile', isAuthenticated, (req, res) => {
+    router.get('/users/profile', authHelper.isAuthenticated, (req, res) => {
         res.render('users/profile', { user: req.user });
     });
     return router;
 };
-function isAuthenticated(req, res, next) {
-    if (req.isAuthenticated())
-        return next();
-    res.redirect('/login');
-}
-function isAnonymous(req, res, next) {
-    if (req.isUnauthenticated())
-        return next();
-    res.redirect('/users/profile');
-}
 //# sourceMappingURL=webroutes.js.map
