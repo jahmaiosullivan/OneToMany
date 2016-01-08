@@ -725,6 +725,7 @@ header .btn-theme {
 
 #services .icon {
 	font-size: 50px;
+    color: #FE7207;
 }
 
 /* END */
@@ -2264,6 +2265,7 @@ header #subtextpanel {
 #stayintouch {
     margin: 0 auto;
     width: 350px;
+    margin-top: 10%;
 }
 
 h1#slogan {

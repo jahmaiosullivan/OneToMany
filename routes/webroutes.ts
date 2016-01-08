@@ -26,6 +26,11 @@ module.exports = router => {
         res.render('users/profile', { user: req.user });
     });
 
+    router.get('/users/all', authHelper.isAuthenticated, (req: express.Request, res: express.Response) => {
+        res.render('candidates/search', { user: req.user });
+    });
+
+
     return router;
 }
 

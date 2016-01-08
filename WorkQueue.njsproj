@@ -3,7 +3,7 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>OneToMany</Name>
+    <Name>WorkQueue</Name>
     <RootNamespace>NodejsWebApp1</RootNamespace>
     <NameOfLastUsedPublishProfile>WorkQueue - Web Deploy</NameOfLastUsedPublishProfile>
     <ToolsVersionPromptShown>1.7</ToolsVersionPromptShown>
@@ -22,7 +22,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
     <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
@@ -2556,6 +2556,8 @@
     <Compile Include="routes\api\v1\invitee.js" />
     <Compile Include="routes\api\v1\user.js" />
     <Compile Include="routes\jobs.js" />
+    <TypeScriptCompile Include="routes\authHelper.ts" />
+    <TypeScriptCompile Include="routes\webroutes_auth.ts" />
     <TypeScriptCompile Include="server.ts" />
     <TypeScriptCompile Include="routes\webroutes.ts" />
     <Compile Include="services\base_service.js" />

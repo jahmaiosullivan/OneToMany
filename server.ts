@@ -21,7 +21,7 @@ var initializer = require("./config/initializer.js"),
 
 app.set("port", process.env.PORT || 1337);
 app.locals.sitename = "OneToMany";
-app.locals.slogan = "Highlighting top STEM graduates from all over the world.";
+app.locals.slogan = "Interactive learning platform for the modern world.";
 app.locals.moment = require("moment");
 app.locals.pluralize = require("pluralize");
 app.locals.defaultDateFormat = require("./vars").defaultDateFormat;
